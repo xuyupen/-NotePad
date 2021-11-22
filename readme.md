@@ -375,7 +375,7 @@ public class NoteColor extends Activity {
 
 按创建时间排序：
 
-![](https://github.com/xuyupen/NotePad/blob/86a5085e77a90630df26b096d166852d6189d551/%E5%88%9B%E5%BB%BA%E6%97%B6%E9%97%B4sort.png)
+![](https://github.com/xuyupen/NotePad/blob/26000538b2cc0e77f0ada402499ca80f61fd537d/%E5%88%9B%E5%BB%BA%E6%97%B6%E9%97%B4sort.png)
 
 按修改时间排序：
 

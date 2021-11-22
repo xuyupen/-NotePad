@@ -125,7 +125,7 @@ mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
 
 实现截图：
 
-![](C:\Users\DELL\Pictures\搜索.png)
+![](https://github.com/xuyupen/NotePad/blob/86a5085e77a90630df26b096d166852d6189d551/%E6%90%9C%E7%B4%A2.png)
 
 ## 3.设置编辑笔记时的背景颜色
 
@@ -295,9 +295,9 @@ public class NoteColor extends Activity {
 
 实现截图：
 
-![](C:\Users\DELL\Pictures\背景选择对话框.png)
+![](https://github.com/xuyupen/NotePad/blob/86a5085e77a90630df26b096d166852d6189d551/%E8%83%8C%E6%99%AF%E9%80%89%E6%8B%A9%E5%AF%B9%E8%AF%9D%E6%A1%86.png)
 
-![](C:\Users\DELL\Pictures\背景修改实例.png)
+![](https://github.com/xuyupen/NotePad/blob/86a5085e77a90630df26b096d166852d6189d551/%E8%83%8C%E6%99%AF%E4%BF%AE%E6%94%B9%E5%AE%9E%E4%BE%8B.png)
 
 ## 4.笔记排序
 
@@ -371,16 +371,16 @@ public class NoteColor extends Activity {
 
 实现截图：
 
-![](C:\Users\DELL\Pictures\排序菜单.png)
+![](https://github.com/xuyupen/NotePad/blob/86a5085e77a90630df26b096d166852d6189d551/%E6%8E%92%E5%BA%8F%E8%8F%9C%E5%8D%95.png)
 
 按创建时间排序：
 
-![](C:\Users\DELL\Pictures\创建时间sort.png)
+![](https://github.com/xuyupen/NotePad/blob/86a5085e77a90630df26b096d166852d6189d551/%E5%88%9B%E5%BB%BA%E6%97%B6%E9%97%B4sort.png)
 
 按修改时间排序：
 
-![](C:\Users\DELL\Pictures\修改时间sort.png)
+![](https://github.com/xuyupen/NotePad/blob/86a5085e77a90630df26b096d166852d6189d551/%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4sort.png)
 
 按颜色排序：
 
-![](C:\Users\DELL\Pictures\颜色排序sort.png)
+![](https://github.com/xuyupen/NotePad/blob/86a5085e77a90630df26b096d166852d6189d551/%E9%A2%9C%E8%89%B2%E6%8E%92%E5%BA%8Fsort.png)

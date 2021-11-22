@@ -1,0 +1,293 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright (C) 2007 The Android Open Source Project
+4
+5     Licensed under the Apache License, Version 2.0 (the "License");
+6     you may not use this file except in compliance with the License.
+7     You may obtain a copy of the License at
+8
+9          http://www.apache.org/licenses/LICENSE-2.0
+10
+11     Unless required by applicable law or agreed to in writing, software
+12     distributed under the License is distributed on an "AS IS" BASIS,
+13     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14     See the License for the specific language governing permissions and
+15     limitations under the License.
+16-->
+17<!--
+18 Declare the contents of this Android application.  The namespace
+19     attribute brings in the Android platform namespace, and the package
+20     supplies a unique name for the application.  When writing your
+21     own application, the package name must be changed from "com.example.*"
+22     to come from a domain that you own or have control over.
+23-->
+24<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+25    package="com.example.android.notepad" >
+26
+27    <uses-sdk
+28        android:minSdkVersion="11"
+28-->D:\NotePad-master\app\src\main\AndroidManifest.xml
+29        android:targetSdkVersion="31" />
+29-->D:\NotePad-master\app\src\main\AndroidManifest.xml
+30
+31    <application
+31-->D:\NotePad-master\app\src\main\AndroidManifest.xml:26:5-141:19
+32        android:debuggable="true"
+33        android:icon="@drawable/app_notes"
+33-->D:\NotePad-master\app\src\main\AndroidManifest.xml:26:18-52
+34        android:label="@string/app_name"
+34-->D:\NotePad-master\app\src\main\AndroidManifest.xml:27:9-41
+35        android:testOnly="true" >
+36        <provider
+36-->D:\NotePad-master\app\src\main\AndroidManifest.xml:29:9-33:20
+37            android:name="com.example.android.notepad.NotePadProvider"
+37-->D:\NotePad-master\app\src\main\AndroidManifest.xml:29:19-49
+38            android:authorities="com.google.provider.NotePad"
+38-->D:\NotePad-master\app\src\main\AndroidManifest.xml:30:13-62
+39            android:exported="false" >
+39-->D:\NotePad-master\app\src\main\AndroidManifest.xml:31:13-37
+40            <grant-uri-permission android:pathPattern=".*" />
+40-->D:\NotePad-master\app\src\main\AndroidManifest.xml:32:13-62
+40-->D:\NotePad-master\app\src\main\AndroidManifest.xml:32:35-59
+41        </provider>
+42
+43        <activity
+43-->D:\NotePad-master\app\src\main\AndroidManifest.xml:35:9-54:20
+44            android:name="com.example.android.notepad.NotesList"
+44-->D:\NotePad-master\app\src\main\AndroidManifest.xml:35:19-43
+45            android:exported="true"
+45-->D:\NotePad-master\app\src\main\AndroidManifest.xml:36:13-36
+46            android:label="@string/title_notes_list" >
+46-->D:\NotePad-master\app\src\main\AndroidManifest.xml:35:44-84
+47            <intent-filter>
+47-->D:\NotePad-master\app\src\main\AndroidManifest.xml:38:13-41:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->D:\NotePad-master\app\src\main\AndroidManifest.xml:39:17-69
+48-->D:\NotePad-master\app\src\main\AndroidManifest.xml:39:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->D:\NotePad-master\app\src\main\AndroidManifest.xml:40:17-77
+50-->D:\NotePad-master\app\src\main\AndroidManifest.xml:40:27-74
+51            </intent-filter>
+52            <intent-filter android:scheme="http" >
+52-->D:\NotePad-master\app\src\main\AndroidManifest.xml:42:13-48:29
+52-->D:\NotePad-master\app\src\main\AndroidManifest.xml:42:28-49
+53                <action android:name="android.intent.action.VIEW" />
+53-->D:\NotePad-master\app\src\main\AndroidManifest.xml:43:17-69
+53-->D:\NotePad-master\app\src\main\AndroidManifest.xml:43:25-66
+54                <action android:name="android.intent.action.EDIT" />
+54-->D:\NotePad-master\app\src\main\AndroidManifest.xml:44:17-69
+54-->D:\NotePad-master\app\src\main\AndroidManifest.xml:44:25-66
+55                <action android:name="android.intent.action.PICK" />
+55-->D:\NotePad-master\app\src\main\AndroidManifest.xml:45:17-69
+55-->D:\NotePad-master\app\src\main\AndroidManifest.xml:45:25-66
+56
+57                <category android:name="android.intent.category.DEFAULT" />
+57-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:17-76
+57-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:27-73
+58
+59                <data android:mimeType="vnd.android.cursor.dir/vnd.google.note" />
+59-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:17-83
+59-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:23-80
+60            </intent-filter>
+61            <intent-filter>
+61-->D:\NotePad-master\app\src\main\AndroidManifest.xml:49:13-53:29
+62                <action android:name="android.intent.action.GET_CONTENT" />
+62-->D:\NotePad-master\app\src\main\AndroidManifest.xml:50:17-76
+62-->D:\NotePad-master\app\src\main\AndroidManifest.xml:50:25-73
+63
+64                <category android:name="android.intent.category.DEFAULT" />
+64-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:17-76
+64-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:27-73
+65
+66                <data android:mimeType="vnd.android.cursor.item/vnd.google.note" />
+66-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:17-83
+66-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:23-80
+67            </intent-filter>
+68        </activity>
+69        <activity
+69-->D:\NotePad-master\app\src\main\AndroidManifest.xml:56:9-84:20
+70            android:name="com.example.android.notepad.NoteEditor"
+70-->D:\NotePad-master\app\src\main\AndroidManifest.xml:56:19-44
+71            android:configChanges="keyboardHidden|orientation"
+71-->D:\NotePad-master\app\src\main\AndroidManifest.xml:59:13-63
+72            android:exported="true"
+72-->D:\NotePad-master\app\src\main\AndroidManifest.xml:60:13-36
+73            android:screenOrientation="sensor"
+73-->D:\NotePad-master\app\src\main\AndroidManifest.xml:58:13-47
+74            android:theme="@android:style/Theme.Holo.Light" >
+74-->D:\NotePad-master\app\src\main\AndroidManifest.xml:57:13-60
+75
+76            <!--
+77                 This filter says that we can view or edit the data of
+78                 a single note
+79            -->
+80            <intent-filter
+80-->D:\NotePad-master\app\src\main\AndroidManifest.xml:63:13-71:29
+81                android:label="@string/resolve_edit"
+81-->D:\NotePad-master\app\src\main\AndroidManifest.xml:63:28-64
+82                android:scheme="http" >
+82-->D:\NotePad-master\app\src\main\AndroidManifest.xml:64:17-38
+83                <action android:name="android.intent.action.VIEW" />
+83-->D:\NotePad-master\app\src\main\AndroidManifest.xml:43:17-69
+83-->D:\NotePad-master\app\src\main\AndroidManifest.xml:43:25-66
+84                <action android:name="android.intent.action.EDIT" />
+84-->D:\NotePad-master\app\src\main\AndroidManifest.xml:44:17-69
+84-->D:\NotePad-master\app\src\main\AndroidManifest.xml:44:25-66
+85                <action android:name="com.android.notepad.action.EDIT_NOTE" />
+85-->D:\NotePad-master\app\src\main\AndroidManifest.xml:68:17-79
+85-->D:\NotePad-master\app\src\main\AndroidManifest.xml:68:25-76
+86
+87                <category android:name="android.intent.category.DEFAULT" />
+87-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:17-76
+87-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:27-73
+88
+89                <data android:mimeType="vnd.android.cursor.item/vnd.google.note" />
+89-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:17-83
+89-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:23-80
+90            </intent-filter>
+91
+92            <!--
+93                 This filter says that we can create a new note inside
+94                 of a directory of notes.  The INSERT action creates an
+95                 empty note; the PASTE action initializes a new note from
+96                 the current contents of the clipboard.
+97            -->
+98            <intent-filter>
+98-->D:\NotePad-master\app\src\main\AndroidManifest.xml:77:13-82:29
+99                <action android:name="android.intent.action.INSERT" />
+99-->D:\NotePad-master\app\src\main\AndroidManifest.xml:78:17-71
+99-->D:\NotePad-master\app\src\main\AndroidManifest.xml:78:25-68
+100                <action android:name="android.intent.action.PASTE" />
+100-->D:\NotePad-master\app\src\main\AndroidManifest.xml:79:17-70
+100-->D:\NotePad-master\app\src\main\AndroidManifest.xml:79:25-67
+101
+102                <category android:name="android.intent.category.DEFAULT" />
+102-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:17-76
+102-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:27-73
+103
+104                <data android:mimeType="vnd.android.cursor.dir/vnd.google.note" />
+104-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:17-83
+104-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:23-80
+105            </intent-filter>
+106        </activity>
+107        <activity
+107-->D:\NotePad-master\app\src\main\AndroidManifest.xml:86:9-112:20
+108            android:name="com.example.android.notepad.TitleEditor"
+108-->D:\NotePad-master\app\src\main\AndroidManifest.xml:86:19-45
+109            android:exported="true"
+109-->D:\NotePad-master\app\src\main\AndroidManifest.xml:91:13-36
+110            android:icon="@drawable/ic_menu_edit"
+110-->D:\NotePad-master\app\src\main\AndroidManifest.xml:88:13-50
+111            android:label="@string/title_edit_title"
+111-->D:\NotePad-master\app\src\main\AndroidManifest.xml:87:13-53
+112            android:theme="@android:style/Theme.Holo.Dialog"
+112-->D:\NotePad-master\app\src\main\AndroidManifest.xml:89:13-61
+113            android:windowSoftInputMode="stateVisible" >
+113-->D:\NotePad-master\app\src\main\AndroidManifest.xml:90:13-55
+114
+115            <!--
+116                 This activity implements an alternative action that can be
+117                 performed on notes: editing their title.  It can be used as
+118                 a default operation if the user invokes this action, and is
+119                 available as an alternative action for any note data.
+120            -->
+121            <intent-filter android:label="@string/resolve_title" >
+121-->D:\NotePad-master\app\src\main\AndroidManifest.xml:96:13-111:29
+121-->D:\NotePad-master\app\src\main\AndroidManifest.xml:96:28-65
+122
+123                <!--
+124                     This is the action we perform.  It is a custom action we
+125                     define for our application, not a generic VIEW or EDIT
+126                     action since we are not a general note viewer/editor.
+127                -->
+128                <action android:name="com.android.notepad.action.EDIT_TITLE" />
+128-->D:\NotePad-master\app\src\main\AndroidManifest.xml:100:17-80
+128-->D:\NotePad-master\app\src\main\AndroidManifest.xml:100:25-77
+129                <!-- DEFAULT: execute if being directly invoked. -->
+130                <category android:name="android.intent.category.DEFAULT" />
+130-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:17-76
+130-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:27-73
+131                <!--
+132                     ALTERNATIVE: show as an alternative action when the user is
+133                     working with this type of data.
+134                -->
+135                <category android:name="android.intent.category.ALTERNATIVE" />
+135-->D:\NotePad-master\app\src\main\AndroidManifest.xml:105:17-80
+135-->D:\NotePad-master\app\src\main\AndroidManifest.xml:105:27-77
+136                <!--
+137                     SELECTED_ALTERNATIVE: show as an alternative action the user
+138                     can perform when selecting this type of data.
+139                -->
+140                <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
+140-->D:\NotePad-master\app\src\main\AndroidManifest.xml:108:17-89
+140-->D:\NotePad-master\app\src\main\AndroidManifest.xml:108:27-86
+141                <!-- This is the data type we operate on. -->
+142                <data android:mimeType="vnd.android.cursor.item/vnd.google.note" />
+142-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:17-83
+142-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:23-80
+143            </intent-filter>
+144        </activity>
+145        <activity
+145-->D:\NotePad-master\app\src\main\AndroidManifest.xml:114:9-121:20
+146            android:name="com.example.android.notepad.NotesLiveFolder"
+146-->D:\NotePad-master\app\src\main\AndroidManifest.xml:114:19-49
+147            android:exported="true"
+147-->D:\NotePad-master\app\src\main\AndroidManifest.xml:116:13-36
+148            android:icon="@drawable/live_folder_notes"
+148-->D:\NotePad-master\app\src\main\AndroidManifest.xml:115:13-55
+149            android:label="@string/live_folder_name" >
+149-->D:\NotePad-master\app\src\main\AndroidManifest.xml:114:50-90
+150            <intent-filter>
+150-->D:\NotePad-master\app\src\main\AndroidManifest.xml:117:13-120:29
+151                <action android:name="android.intent.action.CREATE_LIVE_FOLDER" />
+151-->D:\NotePad-master\app\src\main\AndroidManifest.xml:118:17-83
+151-->D:\NotePad-master\app\src\main\AndroidManifest.xml:118:25-80
+152
+153                <category android:name="android.intent.category.DEFAULT" />
+153-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:17-76
+153-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:27-73
+154            </intent-filter>
+155        </activity>
+156        <activity
+156-->D:\NotePad-master\app\src\main\AndroidManifest.xml:122:9-136:20
+157            android:name="com.example.android.notepad.NoteSearch"
+157-->D:\NotePad-master\app\src\main\AndroidManifest.xml:123:13-38
+158            android:exported="true"
+158-->D:\NotePad-master\app\src\main\AndroidManifest.xml:125:13-36
+159            android:label="NoteSearch" >
+159-->D:\NotePad-master\app\src\main\AndroidManifest.xml:124:13-39
+160            <intent-filter>
+160-->D:\NotePad-master\app\src\main\AndroidManifest.xml:127:13-135:29
+161                <action android:name="android.intent.action.NoteSearch" />
+161-->D:\NotePad-master\app\src\main\AndroidManifest.xml:128:17-75
+161-->D:\NotePad-master\app\src\main\AndroidManifest.xml:128:25-72
+162                <action android:name="android.intent.action.SEARCH" />
+162-->D:\NotePad-master\app\src\main\AndroidManifest.xml:129:17-71
+162-->D:\NotePad-master\app\src\main\AndroidManifest.xml:129:25-68
+163                <action android:name="android.intent.action.SEARCH_LONG_PRESS" />
+163-->D:\NotePad-master\app\src\main\AndroidManifest.xml:130:17-82
+163-->D:\NotePad-master\app\src\main\AndroidManifest.xml:130:25-79
+164
+165                <category android:name="android.intent.category.DEFAULT" />
+165-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:17-76
+165-->D:\NotePad-master\app\src\main\AndroidManifest.xml:46:27-73
+166
+167                <data android:mimeType="vnd.android.cursor.dir/vnd.google.note" />
+167-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:17-83
+167-->D:\NotePad-master\app\src\main\AndroidManifest.xml:47:23-80
+168                <!-- 1.vnd.android.cursor.dir代表返回结果为多列数据 -->
+169                <!-- 2.vnd.android.cursor.item 代表返回结果为单列数据 -->
+170            </intent-filter>
+171        </activity>
+172        <activity
+172-->D:\NotePad-master\app\src\main\AndroidManifest.xml:137:9-139:43
+173            android:name="com.example.android.notepad.NoteColor"
+173-->D:\NotePad-master\app\src\main\AndroidManifest.xml:137:19-43
+174            android:label="Select Color"
+174-->D:\NotePad-master\app\src\main\AndroidManifest.xml:139:13-41
+175            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+175-->D:\NotePad-master\app\src\main\AndroidManifest.xml:138:13-67
+176    </application>
+177
+178</manifest>

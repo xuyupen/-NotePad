@@ -44,7 +44,7 @@ adapter.setViewBinder(viewBinder);
 
 实现截图：
 
-![](C:\Users\DELL\Pictures\时间戳.png)
+![](https://github.com/xuyupen/NotePad/blob/ada1d593a2621b330bc7ddad92f0e2a027ac95eb/%E6%97%B6%E9%97%B4%E6%88%B3.png)
 
 ## 2.笔记搜索（按标题）
 
